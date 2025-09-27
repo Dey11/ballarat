@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
 });
 
 const robotoCondensed = Roboto_Condensed({
-  weight: ["500", "600"],
+  weight: ["500", "800"],
   variable: "--font-roboto-condensed",
   subsets: ["latin"],
 });

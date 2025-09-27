@@ -12,12 +12,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "./ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Hamburger, Menu } from "lucide-react";
 
 export default function Header() {
   return (
     <header className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-5">
-      <div className="bg-primary rounded-brand flex w-full justify-between">
+      <div className="bg-primary rounded-brand flex w-full justify-between px-1">
         <Image
           src="/logo.png"
           alt="logo"
@@ -26,9 +26,14 @@ export default function Header() {
           className="px-2 py-1"
         />
 
-        <NavMenu />
+        <div className="hidden md:flex">
+          <NavMenu />
+        </div>
+        <div className="my-auto md:hidden">
+          <Menu />
+        </div>
       </div>
-      <Button className="bg-secondary text-secondary-foreground rounded-brand font-roboto-condensed py-5 font-semibold">
+      <Button className="bg-secondary text-secondary-foreground rounded-brand font-roboto-condensed hidden cursor-pointer py-5 font-semibold md:flex">
         <span>Contact Us</span>
         <ArrowUpRight className="size-4" />
       </Button>
@@ -38,39 +43,40 @@ export default function Header() {
 
 const sportsItems: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Cricket",
+    href: "/sports/cricket",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Experience the thrill of cricket, from T20s to test matches. Join leagues, track scores, and more.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Football",
+    href: "/sports/football",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Play or follow football matches, join local tournaments, and stay updated with the latest scores.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Foosball",
+    href: "/sports/foosball",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Challenge friends to a fast-paced game of foosball. Find tables, join events, and view leaderboards.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Badminton",
+    href: "/sports/badminton",
+    description:
+      "Book courts, join badminton clubs, and participate in singles or doubles tournaments.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Table Tennis",
+    href: "/sports/table-tennis",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Compete in table tennis matches, track your progress, and connect with other players.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Basketball",
+    href: "/sports/basketball",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Join pickup games, leagues, or tournaments. Stay updated with basketball events near you.",
   },
 ];
 
@@ -78,11 +84,11 @@ export function NavMenu() {
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="font-roboto-condensed font-medium">
-        <NavigationMenuItem className="hover:bg-primary/50">
+        <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
               href="/about-us"
-              className="bg-transparent hover:bg-red-500/50"
+              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
             >
               About Us
             </Link>
@@ -90,11 +96,11 @@ export function NavMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
+          <NavigationMenuTrigger className="hover:bg-foreground hover:text-primary bg-transparent">
             Sports
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 border-0 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+          <NavigationMenuContent className="border-foreground bg-transparent">
+            <ul className="grid w-[300px] gap-2 md:w-[450px] md:grid-cols-2">
               {sportsItems.map((component) => (
                 <ListItem
                   key={component.title}
@@ -108,23 +114,32 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/game-formats" className="bg-transparent">
+            <Link
+              href="/game-formats"
+              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+            >
               Game Formats
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/pricing" className="bg-transparent">
+            <Link
+              href="/pricing"
+              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+            >
               Pricing
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link href="/sportsbook" className="bg-transparent">
+            <Link
+              href="/sportsbook"
+              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+            >
               Sportsbook
             </Link>
           </NavigationMenuLink>
@@ -144,7 +159,9 @@ function ListItem({
     <li {...props}>
       <NavigationMenuLink asChild>
         <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
+          <div className="hover:text-primary text-sm leading-none font-bold">
+            {title}
+          </div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
           </p>
