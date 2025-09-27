@@ -11,8 +11,8 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
-import { Button } from "./ui/button";
-import { ArrowUpRight, Hamburger, Menu } from "lucide-react";
+import { ArrowUpRight, Menu } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Header() {
   return (
@@ -22,7 +22,7 @@ export default function Header() {
           src="/logo.png"
           alt="logo"
           width={100}
-          height={100}
+          height={39}
           className="px-2 py-1"
         />
 
@@ -33,10 +33,69 @@ export default function Header() {
           <Menu />
         </div>
       </div>
-      <Button className="bg-secondary text-secondary-foreground rounded-brand font-roboto-condensed hidden cursor-pointer py-5 font-semibold md:flex">
-        <span>Contact Us</span>
-        <ArrowUpRight className="size-4" />
-      </Button>
+      <motion.button
+        initial="initial"
+        whileHover="hover"
+        className="bg-secondary text-secondary-foreground hover:bg-foreground rounded-brand font-roboto-condensed hidden shrink-0 cursor-pointer items-center gap-2 px-3 py-2 font-semibold whitespace-nowrap md:flex"
+      >
+        <motion.div className="relative overflow-hidden">
+          <motion.span
+            className="inline-block"
+            variants={{
+              initial: { y: 0 },
+              hover: { y: -20 },
+            }}
+            transition={{
+              duration: 0.15,
+              ease: "easeInOut",
+            }}
+          >
+            Contact Us
+          </motion.span>
+          <motion.span
+            className="absolute inset-0"
+            variants={{
+              initial: { y: 20 },
+              hover: { y: 0 },
+            }}
+            transition={{
+              duration: 0.15,
+              ease: "easeInOut",
+            }}
+          >
+            Contact Us
+          </motion.span>
+        </motion.div>
+        <motion.div className="relative overflow-hidden">
+          <motion.div
+            variants={{
+              initial: { x: 0, y: 0 },
+              hover: { x: 20, y: -20 },
+            }}
+            transition={{
+              delay: 0.1,
+              duration: 0.15,
+              ease: "easeInOut",
+            }}
+          >
+            <ArrowUpRight className="size-4" />
+          </motion.div>
+          <motion.div
+            className="absolute inset-0"
+            variants={{
+              initial: { x: -20, y: 20 },
+              hover: { x: 0, y: 0 },
+            }}
+            transition={{
+              delay: 0.1,
+              duration: 0.15,
+              ease: "easeInOut",
+            }}
+          >
+            <ArrowUpRight className="size-4" />
+          </motion.div>
+        </motion.div>
+      </motion.button>
     </header>
   );
 }
