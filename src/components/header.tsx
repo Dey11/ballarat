@@ -29,7 +29,7 @@ export default function Header() {
           "bg-primary w-full",
           isMobile
             ? isOpen
-              ? "absolute inset-0 flex h-full flex-col p-4 px-5"
+              ? "absolute inset-0 z-50 flex h-full flex-col p-4 px-5"
               : "rounded-brand flex justify-between px-1"
             : "rounded-brand flex justify-between px-1",
         )}
