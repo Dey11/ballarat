@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Roboto_Condensed, Inter } from "next/font/google";
+import { DM_Sans, Roboto_Condensed, Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -20,6 +20,12 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const bebasNeue = Bebas_Neue({
+  weight: ["400"],
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Ballarat Box Sports",
   description: "Play like never before",
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${dmSans.variable} ${robotoCondensed.variable} ${inter.variable}`}
+        className={`antialiased ${dmSans.variable} ${robotoCondensed.variable} ${inter.variable} ${bebasNeue.variable}`}
       >
         {children}
       </body>
