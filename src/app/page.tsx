@@ -3,6 +3,7 @@ import Hero from "@/components/landing/hero";
 import { ChevronsDown } from "lucide-react";
 import GamesSection from "@/components/landing/games-section";
 import FeaturesSection from "@/components/landing/features-section";
+import PlayingWaysSection from "@/components/landing/playing-ways-section";
 
 export default function page() {
   // max-w-screen-2xl p-4
@@ -35,6 +36,10 @@ export default function page() {
 
       <section className="overflow-x-hidden">
         <FeaturesSection />
+      </section>
+
+      <section className="overflow-x-hidden">
+        <PlayingWaysSection />
       </section>
     </main>
   );
