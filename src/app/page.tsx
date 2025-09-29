@@ -1,14 +1,10 @@
-"use client";
-
 import Header from "@/components/header";
 import Hero from "@/components/landing/hero";
 import { ChevronsDown } from "lucide-react";
-import Ribbon from "@/components/ribbon";
-import { useRef } from "react";
+import GamesSection from "@/components/landing/games-section";
 
 export default function page() {
   // max-w-screen-2xl p-4
-  const containerRef = useRef<HTMLDivElement | null>(null);
   return (
     <main className="">
       <section className="relative h-screen overflow-hidden">
@@ -32,10 +28,8 @@ export default function page() {
         </div>
       </section>
 
-      <section className="h-screen overflow-hidden">
-        <div ref={containerRef} className="relative mt-2 h-[200vh]">
-          <Ribbon name="Sports" containerRef={containerRef} />
-        </div>
+      <section className="overflow-x-hidden">
+        <GamesSection />
       </section>
     </main>
   );

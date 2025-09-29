@@ -22,7 +22,7 @@ export default function Ribbon({
   const xPosition = useTransform(
     scrollYProgress,
     [0, 1],
-    [slide === "left" ? -200 : 0, slide === "left" ? 200 : -400],
+    [slide === "left" ? -400 : 0, slide === "left" ? 0 : -400],
   );
 
   return (
