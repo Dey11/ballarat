@@ -126,6 +126,18 @@
   }
 }
 
+@layer utilities {
+  .font-roboto-condensed {
+    letter-spacing: -0.04em;
+  }
+  .font-dm-sans {
+    letter-spacing: -0.03em;
+  }
+  .font-inter {
+    letter-spacing: -0.04em;
+  }
+}
+
 /* .dark {
   --sidebar: hsl(240 5.9% 10%);
   --sidebar-foreground: hsl(240 4.8% 95.9%);

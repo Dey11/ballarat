@@ -18,12 +18,12 @@ export default function FeaturesSection() {
         <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
           More Than Just a Pitch
         </h2>
-        <h3 className="font-inter mx-auto mt-3 max-w-lg text-center font-medium text-pretty">
+        <h3 className="font-inter mx-auto mt-3 max-w-xl text-center font-medium text-pretty">
           We provide the pitch, the gear, and the digital scoreboard. All you
           and your mates need to do is show up and play.
         </h3>
 
-        <div className="flex flex-wrap items-center justify-center gap-10 pt-10 pb-5">
+        <div className="flex flex-wrap items-center justify-center gap-6 pt-10 pb-5 sm:gap-10">
           <FeatureCard
             description="Keep your head in the game, not on the score. Our automated system tracks everything live, so your team can focus on strategy and the next big play."
             image="/feature-boxes/digital-scoreboard.png"
@@ -78,11 +78,11 @@ function FeatureCard({
   return (
     <div
       className={cn(
-        "bg-primary flex w-[500px] flex-col gap-y-2 rounded-xl px-4 pb-4",
+        "bg-primary flex w-full max-w-[500px] flex-col gap-y-2 rounded-xl px-4 pb-4",
         className,
       )}
     >
-      <div className="relative h-40 w-full">
+      <div className="relative h-40 w-full sm:h-48">
         <Image
           src={image}
           alt={title}
@@ -109,14 +109,14 @@ type ValueBoxProps = {
 
 function ValueBox({ title, description, icon }: ValueBoxProps) {
   return (
-    <div className="bg-foreground text-background max-w-84 rounded-xl p-4 text-center">
+    <div className="bg-foreground text-background w-full max-w-84 rounded-xl p-4 text-center">
       <div className="flex items-center justify-center gap-x-2 pb-2">
-        <h3 className="font-dm-sans text-primary text-2xl font-semibold">
+        <h3 className="font-dm-sans text-primary text-xl font-semibold sm:text-2xl">
           {title}
         </h3>
         {icon}
       </div>
-      <p className="font-inter text-sm font-medium text-pretty">
+      <p className="font-inter text-sm font-medium text-pretty sm:text-base">
         {description}
       </p>
     </div>

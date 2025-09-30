@@ -16,10 +16,10 @@ export default function PlayingWaysSection() {
         <Ribbon name="Formats" containerRef={containerRef} />
       </div>
       <div className="mx-auto max-w-screen-2xl p-4 pt-16">
-        <h2 className="font-dm-sans mt-5 text-center text-2xl font-semibold text-pretty sm:text-3xl lg:text-4xl">
+        <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
           Ways to Play
         </h2>
-        <h3 className="font-inter mx-auto mt-3 max-w-lg px-4 text-center text-sm font-medium text-pretty sm:text-base">
+        <h3 className="font-inter mx-auto mt-3 max-w-xl px-4 text-center font-medium text-pretty">
           Whether you're after a casual hit-out with mates, a competitive
           league, or just an easy way to join a game, we have a format that's
           perfect for you.
