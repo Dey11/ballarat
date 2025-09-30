@@ -5,6 +5,8 @@ import GamesSection from "@/components/landing/games-section";
 import FeaturesSection from "@/components/landing/features-section";
 import PlayingWaysSection from "@/components/landing/playing-ways-section";
 import AboutUsSection from "@/components/landing/about-us-section";
+import ContactSection from "@/components/landing/contact-section";
+import SectionWrapper from "@/components/landing/section-wrapper";
 
 export default function page() {
   // max-w-screen-2xl p-4
@@ -31,21 +33,25 @@ export default function page() {
         </div>
       </section>
 
-      <section className="overflow-x-hidden">
+      <SectionWrapper name="Sports" slide="left">
         <GamesSection />
-      </section>
+      </SectionWrapper>
 
-      <section className="overflow-x-hidden">
+      <SectionWrapper name="Features" slide="right">
         <FeaturesSection />
-      </section>
+      </SectionWrapper>
 
-      <section className="overflow-x-hidden">
+      <SectionWrapper name="Formats" slide="left">
         <PlayingWaysSection />
-      </section>
+      </SectionWrapper>
 
-      <section className="overflow-x-hidden">
+      <SectionWrapper name="About" slide="right">
         <AboutUsSection />
-      </section>
+      </SectionWrapper>
+
+      <SectionWrapper name="Contact" slide="left">
+        <ContactSection />
+      </SectionWrapper>
     </main>
   );
 }

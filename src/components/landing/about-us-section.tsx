@@ -1,17 +1,8 @@
-"use client";
-
-import { useRef } from "react";
-import Ribbon from "../ribbon";
 import Image from "next/image";
 
 export default function AboutUsSection() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-
   return (
-    <div className="overflow-hidden">
-      <div ref={containerRef} className="relative mt-2">
-        <Ribbon name="About" slide="right" containerRef={containerRef} />
-      </div>
+    <div>
       <div className="mx-auto max-w-screen-2xl p-4 pt-16">
         <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
           Built for Ballarat
