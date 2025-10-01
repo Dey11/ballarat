@@ -1,4 +1,6 @@
+import { Clock, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+import ContactUsForm from "./contact-us-form";
 
 export default function ContactSection() {
   return (
@@ -13,7 +15,41 @@ export default function ContactSection() {
         </h3>
       </div>
 
-      <div className="mx-auto max-w-screen-xl p-4 pb-16"></div>
+      <div className="mx-auto max-w-screen-xl p-4 pb-16">
+        <div className="flex items-center justify-center gap-5">
+          <div className="rounded-brand flex flex-1 flex-col gap-5 bg-white p-4">
+            <h4 className="font-roboto-condensed text-xl font-semibold">
+              Contact us at
+            </h4>
+
+            <div className="font-inter flex flex-col gap-2 text-sm">
+              <div className="flex items-center gap-2">
+                <Mail className="text-primary size-4" />
+                <p>hello@ballaratbox.com</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="text-primary size-4" />
+                <p>+41-912-159-1294</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="text-primary size-4" />
+                <p>Monday - Friday, 8 AM - 5 PM</p>
+              </div>
+            </div>
+
+            <div className="relative h-80 w-full">
+              <Image
+                src="/map.png"
+                alt="map"
+                fill
+                className="rounded-lg object-cover"
+              />
+            </div>
+          </div>
+
+          <ContactUsForm />
+        </div>
+      </div>
     </div>
   );
 }
