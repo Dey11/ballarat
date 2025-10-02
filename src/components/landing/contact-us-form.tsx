@@ -41,7 +41,7 @@ export default function ContactUsForm() {
   };
 
   return (
-    <div className="flex-2 rounded-2xl bg-[#151515] px-6 pt-6 pb-5">
+    <div className="flex-2 rounded-2xl bg-[#151515] px-6 py-7">
       <h3 className="font-dm-sans text-primary pb-5 text-2xl font-semibold">
         Contact Us
       </h3>
@@ -113,7 +113,7 @@ export default function ContactUsForm() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
           <label className="text-background">Sport(s) of Interest</label>
           <div className="flex items-center justify-center gap-4">
             {sports.map((sport) => (
@@ -137,7 +137,7 @@ export default function ContactUsForm() {
           ) : null}
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
           <label className="text-background">
             Which format excites you the most?
           </label>

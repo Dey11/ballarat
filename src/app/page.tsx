@@ -7,6 +7,7 @@ import PlayingWaysSection from "@/components/landing/playing-ways-section";
 import AboutUsSection from "@/components/landing/about-us-section";
 import ContactSection from "@/components/landing/contact-section";
 import SectionWrapper from "@/components/landing/section-wrapper";
+import Footer from "@/components/footer";
 
 export default function page() {
   // max-w-screen-2xl p-4
@@ -52,6 +53,8 @@ export default function page() {
       <SectionWrapper name="Contact" slide="left">
         <ContactSection />
       </SectionWrapper>
+
+      <Footer />
     </main>
   );
 }
