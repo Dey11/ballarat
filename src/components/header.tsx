@@ -14,13 +14,30 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import MobileSidebar from "./mobile-sidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import ContactUsButton from "./landing/contact-us";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (!isMobile) return;
+    const prevOverflow = document.body.style.overflow;
+    const prevTouchAction = document.body.style.touchAction;
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
+    } else {
+      document.body.style.overflow = prevOverflow || "";
+      document.body.style.touchAction = prevTouchAction || "";
+    }
+    return () => {
+      document.body.style.overflow = prevOverflow || "";
+      document.body.style.touchAction = prevTouchAction || "";
+    };
+  }, [isMobile, isOpen]);
 
   return (
     <header className="mx-auto flex w-full max-w-screen-2xl items-center justify-between gap-5">
@@ -29,7 +46,7 @@ export default function Header() {
           "bg-primary w-full",
           isMobile
             ? isOpen
-              ? "absolute inset-0 z-50 flex h-full flex-col p-4 px-5"
+              ? "fixed inset-0 z-[100] flex h-[100svh] w-[100svw] flex-col p-4 px-5"
               : "rounded-brand flex justify-between px-1"
             : "rounded-brand flex justify-between px-1",
         )}

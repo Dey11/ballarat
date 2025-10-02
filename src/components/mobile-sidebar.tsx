@@ -14,10 +14,10 @@ export default function MobileSidebar() {
   const [isSportsOpen, setIsSportsOpen] = useState(false);
 
   return (
-    <aside className="pt-10">
+    <aside className="h-[100svh] pt-10">
       <motion.ul
         layout
-        className="flex h-[80svh] flex-col gap-6 overflow-y-auto"
+        className="flex h-[80svh] flex-col gap-6 overflow-y-auto overscroll-contain"
       >
         {sidebarItems.map((item, index) => (
           <motion.div
