@@ -1,10 +1,11 @@
-import { Clock, Mail, Phone } from "lucide-react";
+import { ChevronUp, Clock, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import ContactUsForm from "./contact-us-form";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <div>
+    <div id="contact">
       <div className="mx-auto max-w-screen-2xl p-4 pt-16">
         <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
           Contact Us
@@ -16,8 +17,8 @@ export default function ContactSection() {
       </div>
 
       <div className="mx-auto max-w-screen-xl p-4 pb-16">
-        <div className="flex items-center justify-center gap-5">
-          <div className="rounded-brand flex flex-1 flex-col gap-5 bg-white p-4">
+        <div className="flex flex-wrap items-center justify-center gap-5">
+          <div className="flex flex-1 flex-col gap-5 rounded-lg bg-white p-4">
             <h4 className="font-roboto-condensed text-xl font-semibold">
               Contact us at
             </h4>
@@ -50,6 +51,14 @@ export default function ContactSection() {
           <ContactUsForm />
         </div>
       </div>
+
+      <Link
+        href="/#hero"
+        className="font-inter flex items-center justify-center gap-1"
+      >
+        <span>Back to top</span>
+        <ChevronUp className="size-5" />
+      </Link>
     </div>
   );
 }
