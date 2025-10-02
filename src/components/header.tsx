@@ -60,7 +60,7 @@ export default function Header() {
             className="px-2 py-1"
           />
 
-          <div className="block md:hidden">
+          <div className="mt-1 mr-1 block md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="relative my-auto size-6"
