@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutUsSection() {
   return (
-    <div>
+    <div id="about-us">
       <div className="mx-auto max-w-screen-2xl p-4 pt-16">
         <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
           Built for Ballarat

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function PlayingWaysSection() {
   return (
-    <div className="mx-auto max-w-screen-2xl p-4 pt-16">
+    <div id="formats" className="mx-auto max-w-screen-2xl p-4 pt-16">
       <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
         Ways to Play
       </h2>
@@ -19,7 +19,7 @@ export default function PlayingWaysSection() {
         <CardWrapper
           title="Casual Play"
           footer="Casual games begin at $10 per person!"
-          href="/casual-play"
+          href="/#contact"
         >
           <div className="font-inter flex w-full flex-col items-center justify-center gap-3 text-nowrap lg:flex-row lg:gap-5">
             <div className="flex w-full flex-col justify-between gap-2">
@@ -77,7 +77,7 @@ export default function PlayingWaysSection() {
         <CardWrapper
           title="Competitive Leagues"
           footer="Join a league now!"
-          href="/competitive-play"
+          href="/#contact"
           isBottomBox
         >
           <div className="bg-foreground text-background flex w-full justify-center rounded-lg p-2">
@@ -123,7 +123,7 @@ export default function PlayingWaysSection() {
         <CardWrapper
           title="Knockout Tournaments"
           footer="Sign up for a tournament today!"
-          href="/sign-up"
+          href="/#contact"
           isBottomBox
         >
           <div className="bg-foreground text-background flex justify-center rounded-lg p-2">

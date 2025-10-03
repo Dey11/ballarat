@@ -17,6 +17,7 @@ import MobileSidebar from "./mobile-sidebar";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import ContactUsButton from "./landing/contact-us";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,13 +53,15 @@ export default function Header() {
         )}
       >
         <div className="flex w-full items-center justify-between gap-2">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={100}
-            height={39}
-            className="px-2 py-1"
-          />
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={100}
+              height={39}
+              className="px-2 py-1"
+            />
+          </Link>
 
           <div className="mt-1 mr-1 block md:hidden">
             <button
@@ -84,7 +87,9 @@ export default function Header() {
             <NavMenu />
           </div>
         </div>
-        {isOpen && isMobile && <MobileSidebar />}
+        {isOpen && isMobile && (
+          <MobileSidebar onClose={() => setIsOpen(false)} />
+        )}
       </div>
       {!isMobile && <ContactUsButton />}
     </header>
@@ -94,33 +99,41 @@ export default function Header() {
 const sportsItems: { title: string; href: string; description: string }[] = [
   {
     title: "Box Cricket",
-    href: "/sports/box-cricket",
+    href: "/#games",
     description:
       "Play fast-paced indoor box cricket. Join leagues, book sessions, and compete with friends.",
   },
   {
     title: "Futsal",
-    href: "/sports/futsal",
+    href: "/#games",
     description:
       "Experience the excitement of futsal. Book courts, join teams, and participate in tournaments.",
   },
   {
     title: "Indoor AFL",
-    href: "/sports/indoor-afl",
+    href: "/#games",
     description:
       "Enjoy indoor AFL action. Register for games, join leagues, and stay active all year round.",
   },
 ];
 
 export function NavMenu() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
+  const isSportsActive = () => pathname?.startsWith("/sports/");
+
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="font-roboto-condensed font-medium">
         <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
-              href="/about-us"
-              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+              href="/#about-us"
+              className={cn(
+                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                isActive("/about-us") && "underline",
+              )}
             >
               About Us
             </Link>
@@ -128,7 +141,12 @@ export function NavMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:bg-foreground hover:text-primary bg-transparent">
+          <NavigationMenuTrigger
+            className={cn(
+              "hover:bg-foreground hover:text-primary bg-transparent",
+              isSportsActive() && "underline",
+            )}
+          >
             Sports
           </NavigationMenuTrigger>
           <NavigationMenuContent className="border-foreground bg-transparent">
@@ -149,8 +167,11 @@ export function NavMenu() {
         <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
-              href="/game-formats"
-              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+              href="/#formats"
+              className={cn(
+                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                isActive("/game-formats") && "underline",
+              )}
             >
               Game Formats
             </Link>
@@ -160,7 +181,10 @@ export function NavMenu() {
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
               href="/pricing"
-              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+              className={cn(
+                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                isActive("/pricing") && "underline",
+              )}
             >
               Pricing
             </Link>
@@ -170,7 +194,10 @@ export function NavMenu() {
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
               href="/sports-book"
-              className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
+              className={cn(
+                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                isActive("/sports-book") && "underline",
+              )}
             >
               Sportsbook
             </Link>
