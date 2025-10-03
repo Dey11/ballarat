@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary h-96 w-full overflow-hidden">
+    <footer className="bg-primary h-60 w-full overflow-hidden">
       <div className="font-bebas-neue relative flex items-start justify-between gap-2 px-4 text-sm md:text-xl">
         <Link href={"/privacy-policy"} className="group relative pt-2">
           Privacy Policy
