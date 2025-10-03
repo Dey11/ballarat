@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Pricing",
+  description:
+    "Court hire, leagues, and training pricing in Ballarat. Simple, clear pricing for knockout tournaments, casual play, and competitive leagues.",
+  alternates: { canonical: "/pricing" },
+  openGraph: { url: "/pricing" },
+};
 
 export default function Page() {
   return (

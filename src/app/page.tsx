@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/header";
 import Hero from "@/components/landing/hero";
 import { ChevronsDown } from "lucide-react";
@@ -8,6 +9,14 @@ import AboutUsSection from "@/components/landing/about-us-section";
 import ContactSection from "@/components/landing/contact-section";
 import SectionWrapper from "@/components/landing/section-wrapper";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Ballarat's premier indoor sports facility for Futsal, AFL, and Cricket. Book courts, join leagues, and experience professional-level sporting action.",
+  alternates: { canonical: "/" },
+  openGraph: { url: "/" },
+};
 
 export default function page() {
   // max-w-screen-2xl p-4
