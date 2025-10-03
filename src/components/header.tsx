@@ -169,7 +169,7 @@ export function NavMenu() {
         <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
-              href="/sportsbook"
+              href="/sports-book"
               className="hover:text-primary bg-transparent transition-colors duration-150 ease-in-out"
             >
               Sportsbook

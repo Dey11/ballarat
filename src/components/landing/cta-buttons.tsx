@@ -45,12 +45,14 @@ export default function CTAButtons() {
           </div>
         </motion.button>
       </Link>
-      <Button
-        className="hover:text-background font-roboto-condensed cursor-pointer bg-transparent text-lg font-semibold"
-        variant="ghost"
-      >
-        Explore our services
-      </Button>
+      <Link href="/sports-book">
+        <Button
+          className="hover:text-background font-roboto-condensed cursor-pointer bg-transparent text-lg font-semibold"
+          variant="ghost"
+        >
+          Explore our services
+        </Button>
+      </Link>
     </div>
   );
 }

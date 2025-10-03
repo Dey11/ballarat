@@ -66,7 +66,7 @@ const sidebarItems = [
   },
   { title: "Game Formats", href: "/game-formats" },
   { title: "Pricing", href: "/pricing" },
-  { title: "Sportsbook", href: "/sportsbook" },
+  { title: "Sportsbook", href: "/sports-book" },
 ];
 
 type SidebarListItemProps = {

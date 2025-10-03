@@ -1,5 +1,6 @@
 import { ChevronRight, ShieldCheck } from "lucide-react";
 import GameBox from "./game-box";
+import Link from "next/link";
 
 export default function GamesSection() {
   return (
@@ -41,13 +42,17 @@ export default function GamesSection() {
         />
       </div>
 
-      <div className="bg-foreground text-primary rounded-brand font-roboto-condensed mx-auto flex max-w-[1200px] cursor-pointer items-center justify-between p-2 px-3 text-xs font-semibold sm:text-base">
-        <p>Casual games begin at $10 per person. Take a look at our pricing!</p>
+      <Link href="/pricing">
+        <div className="bg-foreground hover:bg-foreground/80 text-primary rounded-brand font-roboto-condensed mx-auto flex max-w-[1200px] cursor-pointer items-center justify-between p-2 px-3 text-xs font-semibold sm:text-base">
+          <p>
+            Casual games begin at $10 per person. Take a look at our pricing!
+          </p>
 
-        <div className="bg-background text-foreground rounded-sm p-1">
-          <ChevronRight className="size-3 sm:size-4" />
+          <div className="bg-background text-foreground rounded-sm p-1">
+            <ChevronRight className="size-3 sm:size-4" />
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
