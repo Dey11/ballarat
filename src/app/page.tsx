@@ -13,7 +13,7 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Ballarat's premier indoor sports facility for Futsal, AFL, and Cricket. Book courts, join leagues, and experience professional-level sporting action.",
+    "Ballarat's premier box sports facility for Futsal, AFL, and Box Cricket. Book courts, join leagues, and experience professional-level sporting action.",
   alternates: { canonical: "/" },
   openGraph: { url: "/" },
 };

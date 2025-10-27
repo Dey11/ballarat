@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function MainLayout({
   children,
@@ -6,9 +7,12 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className={`p-4`}>
-      <Header />
-      {children}
+    <div>
+      <div className="p-4">
+        <Header />
+        {children}
+      </div>{" "}
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -30,7 +31,7 @@ export default function Page() {
           tag="Winner-takes-all cash prize"
           price="$15"
           per="person"
-          href="/knockout-tournaments"
+          href="/#contact"
           features={knockoutTourneyFeatures}
           premium={false}
         />
@@ -38,9 +39,9 @@ export default function Page() {
           title="Casual Play"
           description="For individuals and groups looking for fun, flexible game without commitment"
           tag="Discounted rates for regular groups"
-          price="$15"
-          per="person"
-          href="/casual-play"
+          price="$5"
+          per="person*"
+          href="/#contact"
           features={casualPlayFeatures}
           premium={true}
         />
@@ -50,7 +51,7 @@ export default function Page() {
           tag="+$10/match for every player"
           price="$180"
           per="team of 6"
-          href="/competitive-leagues"
+          href="/#contact"
           features={competitiveLeaguesFeatures}
           premium={false}
         />
@@ -104,15 +105,17 @@ function PricingCard({
 
         <p className="text-sm font-medium">{description}</p>
 
-        <Button
-          className={cn(
-            "font-dm-sans cursor-pointer text-xl",
-            !premium &&
-              "bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] hover:bg-white/40 hover:shadow-[0_0_10px_rgba(0,0,0,0.2)]",
-          )}
-        >
-          Get Started
-        </Button>
+        <Link href={href} className="w-full">
+          <Button
+            className={cn(
+              "font-dm-sans w-full cursor-pointer text-xl",
+              !premium &&
+                "bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] hover:bg-white/40 hover:shadow-[0_0_10px_rgba(0,0,0,0.2)]",
+            )}
+          >
+            Get Started
+          </Button>
+        </Link>
       </div>
 
       <Separator className={cn("my-5", premium && "bg-background")} />
@@ -124,7 +127,7 @@ function PricingCard({
           {features.map((feature, index) => (
             <span
               key={index}
-              className="flex items-center gap-x-1 overflow-hidden text-sm font-medium text-nowrap text-ellipsis"
+              className="flex items-center gap-x-1 overflow-hidden pt-1 text-sm font-medium text-nowrap text-ellipsis"
             >
               <CheckIcon className="size-2 shrink-0" />
               <li>{feature}</li>
@@ -151,7 +154,7 @@ const casualPlayFeatures = [
   "Join via our exclusive WhatsApp community polls",
   "All high-quality equipment provided",
   "Perfect for solo players and small groups",
-  "Play in a safe, all-weather environment",
+  "Play in a safe, weather-resistant environment",
 ];
 
 const competitiveLeaguesFeatures = [

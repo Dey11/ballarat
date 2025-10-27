@@ -9,19 +9,19 @@ export default function PlayingWaysSection() {
       <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
         Ways to Play
       </h2>
-      <h3 className="font-inter mx-auto mt-3 max-w-xl px-4 text-center font-medium text-pretty">
+      <h3 className="font-inter mx-auto mt-3 max-w-screen-sm px-4 text-center font-medium text-pretty">
         Whether you're after a casual hit-out with mates, a competitive league,
-        or just an easy way to join a game, we have a format that's perfect for
-        you.
+        or just an easy way to join a game, we have a format and field that's
+        perfect for you 24x7.
       </h3>
 
       <div className="flex flex-wrap items-center justify-center gap-4 pt-10 pb-5 sm:gap-10">
         <CardWrapper
           title="Casual Play"
-          footer="Casual games begin at $10 per person!"
+          footer="Casual games begin at $5 per person*"
           href="/#contact"
         >
-          <div className="font-inter flex w-full flex-col items-center justify-center gap-3 text-nowrap lg:flex-row lg:gap-5">
+          <div className="font-inter flex w-full flex-col-reverse items-center justify-center gap-3 text-nowrap lg:flex-row lg:gap-5">
             <div className="flex w-full flex-col justify-between gap-2">
               <div className="border-primary flex items-center justify-center gap-2 rounded-lg border-2 border-dashed p-2">
                 <Image
@@ -70,13 +70,18 @@ export default function PlayingWaysSection() {
               </p>
             </div>
           </div>
+          <p className="font-inter mx-auto max-w-md py-2 text-center text-sm font-medium text-pretty">
+            Easily join through our WhatsApp communities — regular match posts
+            and polls will be shared, and you can join whenever you’re
+            available.
+          </p>
         </CardWrapper>
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-4 pt-5 pb-10 sm:gap-5">
         <CardWrapper
           title="Competitive Leagues"
-          footer="Join a league now!"
+          footer="Join Our First League - It’s Free!"
           href="/#contact"
           isBottomBox
         >
@@ -122,7 +127,7 @@ export default function PlayingWaysSection() {
 
         <CardWrapper
           title="Knockout Tournaments"
-          footer="Sign up for a tournament today!"
+          footer="Join Our Communities."
           href="/#contact"
           isBottomBox
         >
@@ -196,7 +201,7 @@ function CardWrapper({
       <div className="px-2 py-2 sm:px-4">{children}</div>
       <Link
         href={href}
-        className="bg-foreground font-roboto-condensed text-primary flex items-center justify-center gap-2 rounded-lg p-2 text-sm font-semibold sm:text-base md:justify-between"
+        className="bg-foreground font-roboto-condensed text-primary flex items-center justify-center gap-2 rounded-lg p-2 text-sm font-semibold sm:text-lg md:justify-between"
       >
         {footer}
         <div className="bg-background text-foreground rounded-sm p-1">

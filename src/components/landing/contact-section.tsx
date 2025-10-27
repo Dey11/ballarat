@@ -2,6 +2,7 @@ import { ChevronUp, Clock, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import ContactUsForm from "./contact-us-form";
 import Link from "next/link";
+import { EMAIL, PHONE } from "@/lib/constants";
 
 export default function ContactSection() {
   return (
@@ -26,15 +27,21 @@ export default function ContactSection() {
             <div className="font-inter flex flex-col gap-2 text-sm">
               <div className="flex items-center gap-2">
                 <Mail className="text-primary size-4" />
-                <p>hello@ballaratbox.com</p>
+                <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="text-primary size-4" />
-                <p>+41-912-159-1294</p>
+                {PHONE ? (
+                  <a href={`tel:${PHONE}`}>{PHONE}</a>
+                ) : (
+                  <p>Coming Soon</p>
+                )}
               </div>
-              <div className="flex items-center gap-2">
-                <Clock className="text-primary size-4" />
-                <p>Monday - Friday, 8 AM - 5 PM</p>
+              <div className="flex max-w-xs items-center gap-2">
+                <Clock className="text-primary size-4 shrink-0" />
+                <p>
+                  Staffed Hours: Every day from 5 PM – 10 PM (24/7 access model)
+                </p>
               </div>
             </div>
 

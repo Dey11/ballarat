@@ -66,7 +66,7 @@ const sidebarItems = [
     children: [
       { title: "Box Cricket", href: "/#games" },
       { title: "Futsal", href: "/#games" },
-      { title: "Indoor AFL", href: "/#games" },
+      { title: "Box AFL", href: "/#games" },
     ],
   },
   { title: "Game Formats", href: "/#formats" },

@@ -191,7 +191,7 @@ export default function ContactUsForm() {
 
         <Button
           type="submit"
-          className="bg-primary text-foreground font-roboto-condensed w-fit px-10 text-lg font-semibold"
+          className="bg-primary text-foreground font-roboto-condensed mt-5 w-fit px-10 text-lg font-semibold"
         >
           Submit
         </Button>

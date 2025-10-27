@@ -13,7 +13,7 @@ export default function GamesSection() {
       <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
         Choose Your Game
       </h2>
-      <h3 className="font-inter mx-auto mt-3 max-w-xl text-center font-medium text-pretty">
+      <h3 className="font-inter mx-auto mt-3 max-w-lg text-center font-medium text-pretty">
         Whether you're a seasoned team or just having a kick with mates, we've
         got the perfect pitch for your Futsal, AFL, or Cricket match.
       </h3>
@@ -36,16 +36,16 @@ export default function GamesSection() {
         <GameBox
           capacity={5}
           description="6-a-side box cricket is a fast-paced, exciting format of the game, perfect for small teams. It emphasizes quick reflexes."
-          image="/game-boxes/indoor-afl.png"
-          name="Indoor AFL"
-          svg="/game-boxes/indoor-afl.svg"
+          image="/game-boxes/box-afl.png"
+          name="Box AFL"
+          svg="/game-boxes/box-afl.svg"
         />
       </div>
 
       <Link href="/pricing">
         <div className="bg-foreground hover:bg-foreground/80 text-primary rounded-brand font-roboto-condensed mx-auto flex max-w-[1200px] cursor-pointer items-center justify-between p-2 px-3 text-xs font-semibold sm:text-base">
           <p>
-            Casual games begin at $10 per person. Take a look at our pricing!
+            Casual games begin at $5 per person*. Take a look at our pricing!
           </p>
 
           <div className="bg-background text-foreground rounded-sm p-1">

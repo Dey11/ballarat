@@ -49,7 +49,7 @@ export default function Header() {
             ? isOpen
               ? "fixed inset-0 z-[100] flex h-[100svh] w-[100svw] flex-col p-4 px-5"
               : "rounded-brand flex justify-between px-1"
-            : "rounded-brand flex justify-between px-1",
+            : "rounded-brand flex justify-between px-1 py-1",
         )}
       >
         <div className="flex w-full items-center justify-between gap-2">
@@ -101,7 +101,7 @@ const sportsItems: { title: string; href: string; description: string }[] = [
     title: "Box Cricket",
     href: "/#games",
     description:
-      "Play fast-paced indoor box cricket. Join leagues, book sessions, and compete with friends.",
+      "Play fast-paced box cricket. Join leagues, book sessions, and compete with friends.",
   },
   {
     title: "Futsal",
@@ -110,10 +110,10 @@ const sportsItems: { title: string; href: string; description: string }[] = [
       "Experience the excitement of futsal. Book courts, join teams, and participate in tournaments.",
   },
   {
-    title: "Indoor AFL",
+    title: "Box AFL",
     href: "/#games",
     description:
-      "Enjoy indoor AFL action. Register for games, join leagues, and stay active all year round.",
+      "Enjoy box AFL action. Register for games, join leagues, and stay active all year round.",
   },
 ];
 
@@ -125,13 +125,13 @@ export function NavMenu() {
 
   return (
     <NavigationMenu viewport={false}>
-      <NavigationMenuList className="font-roboto-condensed font-medium">
+      <NavigationMenuList className="font-roboto-condensed">
         <NavigationMenuItem className="hover:bg-foreground rounded-brand hover:text-primary">
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
             <Link
               href="/#about-us"
               className={cn(
-                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                "hover:text-primary bg-transparent text-[1.05rem] transition-colors duration-150 ease-in-out",
                 isActive("/about-us") && "underline",
               )}
             >
@@ -143,7 +143,7 @@ export function NavMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger
             className={cn(
-              "hover:bg-foreground hover:text-primary bg-transparent",
+              "hover:bg-foreground hover:text-primary bg-transparent text-[1.05rem]",
               isSportsActive() && "underline",
             )}
           >
@@ -169,7 +169,7 @@ export function NavMenu() {
             <Link
               href="/#formats"
               className={cn(
-                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                "hover:text-primary bg-transparent text-[1.05rem] transition-colors duration-150 ease-in-out",
                 isActive("/game-formats") && "underline",
               )}
             >
@@ -182,7 +182,7 @@ export function NavMenu() {
             <Link
               href="/pricing"
               className={cn(
-                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                "hover:text-primary bg-transparent text-[1.05rem] transition-colors duration-150 ease-in-out",
                 isActive("/pricing") && "underline",
               )}
             >
@@ -195,7 +195,7 @@ export function NavMenu() {
             <Link
               href="/sports-book"
               className={cn(
-                "hover:text-primary bg-transparent transition-colors duration-150 ease-in-out",
+                "hover:text-primary bg-transparent text-[1.05rem] transition-colors duration-150 ease-in-out",
                 isActive("/sports-book") && "underline",
               )}
             >

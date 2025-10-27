@@ -8,9 +8,9 @@ export default function FeaturesSection() {
       <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
         More Than Just a Pitch
       </h2>
-      <h3 className="font-inter mx-auto mt-3 max-w-xl text-center font-medium text-pretty">
-        We provide the pitch, the gear, and the digital scoreboard. All you and
-        your mates need to do is show up and play.
+      <h3 className="font-inter mx-auto mt-3 max-w-lg text-center font-medium text-pretty">
+        We provide the pitch, the gear, and a 24/7 gym like facility. All you
+        and your mates need to do is show up and play.
       </h3>
 
       <div className="flex flex-wrap items-center justify-center gap-6 pt-10 pb-5 sm:gap-10">
@@ -20,7 +20,8 @@ export default function FeaturesSection() {
           title="Digital Scoreboards "
         />
         <FeatureCard
-          description="End the arguments before they begin. A quick glance at the replay screen settles any dispute, keeping the game fair, fast, and fun for everyone."
+          description="A quick glance at the replay screen settles any dispute, keeping the game fair, fast, and fun for everyone. Currently available for Cricket only. Replay features for AFL and Football are coming soon.
+"
           image="/feature-boxes/instant-replays.png"
           title="Instant Replays"
           className="flex-col-reverse pt-4 pb-0"
@@ -40,11 +41,17 @@ export default function FeaturesSection() {
           title="Gear Included"
         />
         <ValueBox
-          description="Our venue is for everyone. From elite teams to beginners seeking a fun run, you'll find your perfect game at Ballarat Box Sports. So get ready to play!"
+          description="Our venue is for everyone. From elite teams to beginners seeking a fun run, you'll find your perfect game at Ballarat Box Sports."
           icon={<Trophy className="size-6" />}
           title="Play Your Way"
         />
       </div>
+
+      <p className="font-inter mx-auto max-w-2xl text-center text-base font-medium text-pretty">
+        We'll soon be introducing WhatsApp communities to make it easier for
+        players to connect, join casual games, and later decide if you would
+        like to participate in leagues.
+      </p>
     </div>
   );
 }
@@ -82,7 +89,7 @@ function FeatureCard({
 
       <div className="flex flex-col gap-y-2">
         <h3 className="font-dm-sans text-2xl font-semibold">{title}</h3>
-        <p className="font-inter text-sm font-medium text-pretty">
+        <p className="font-inter max-w-md text-sm font-medium text-pretty">
           {description}
         </p>
       </div>

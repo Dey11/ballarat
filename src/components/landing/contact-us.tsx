@@ -8,7 +8,7 @@ export default function ContactUsButton() {
       <motion.button
         initial="initial"
         whileHover="hover"
-        className="bg-secondary text-secondary-foreground hover:bg-foreground rounded-brand font-roboto-condensed hidden shrink-0 cursor-pointer items-center gap-2 px-3 py-2 font-semibold whitespace-nowrap md:flex"
+        className="bg-secondary text-secondary-foreground hover:bg-foreground rounded-brand font-roboto-condensed hidden shrink-0 cursor-pointer items-center gap-2 p-3 font-semibold whitespace-nowrap md:flex"
       >
         <motion.div className="relative overflow-hidden">
           <motion.span

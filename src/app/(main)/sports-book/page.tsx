@@ -39,7 +39,7 @@ const rules: SportRules[] = [
           "1 Run: The batted ball does not cross the yellow line.",
           "2 Runs: The batted ball crosses the first line.",
           "4 Runs: The batted ball crosses the second line.",
-          "6 Runs: The batted ball hits the front net on the full. A physical run is not required.",
+          "6 Runs: The batted ball hits the front net on the full. A physical run is not required. It’s okay if the ball hits the sides or the roof of the field — it will still count as six runs as long as it does not touch the ground.",
         ],
       },
       {
@@ -97,7 +97,7 @@ const rules: SportRules[] = [
     ],
   },
   {
-    sport: "Indoor AFL",
+    sport: "Box AFL",
     sections: [
       {
         title: "I. Game Format & Teams",
@@ -109,7 +109,7 @@ const rules: SportRules[] = [
       {
         title: "II. Scoring",
         bullets: [
-          "Points are scored by kicking the ball through the designated goal area. The field is divided into zones which dictate how points are awarded.",
+          "Scoring is determined by kicking the ball through the goalposts at either end of the pitch, where futsal goals are usually placed. A team is only eligible to score once it has crossed the yellow line nearest to the goal.",
           "Goal (3 Points): The ball is kicked through the central goalposts.",
           "Behind (1 Point): The ball makes contact with the goal netting area outside of the posts.",
           "Midfield Rule: The ball must be passed at least once after it has crossed the midfield line before a team is eligible to score.",

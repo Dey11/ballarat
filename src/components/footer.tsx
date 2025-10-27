@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
+import { INSTAGRAM_URL, FACEBOOK_URL, WHATSAPP_URL } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary h-60 w-full overflow-hidden">
+    <footer className="bg-primary h-52 w-full overflow-hidden md:h-96">
       <div className="font-bebas-neue relative flex items-start justify-between gap-2 px-4 text-sm md:text-xl">
         <Link href={"/privacy-policy"} className="group relative pt-2">
           Privacy Policy
@@ -14,6 +16,7 @@ export default function Footer() {
           height="200"
           viewBox="0 0 555 222"
           fill="none"
+          className="hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -40,10 +43,37 @@ export default function Footer() {
           </text>
         </svg>
 
+        <div className="block pt-1 text-2xl md:hidden">Ballarat Box Sports</div>
+
         <Link href={"/terms-of-service"} className="group relative pt-2">
           Terms of Service
           <span className="bg-foreground absolute bottom-1 left-0 h-0.5 w-0 transition-all duration-150 ease-in-out group-hover:w-full" />
         </Link>
+      </div>
+      <Image
+        src="/icons/b-logo.png"
+        alt="Ballarat Box Sports"
+        width={40}
+        height={40}
+        className="mx-auto pt-10"
+      />
+
+      <div className="font-bebas-neue flex w-full items-center justify-center gap-4 pt-5 text-base -tracking-[0.04em] text-white md:text-2xl">
+        <Link className="hover:underline" target="_blank" href={INSTAGRAM_URL}>
+          Instagram
+        </Link>
+        <Link className="hover:underline" target="_blank" href={FACEBOOK_URL}>
+          Facebook
+        </Link>
+        <Link className="hover:underline" target="_blank" href={WHATSAPP_URL}>
+          WhatsApp
+        </Link>
+      </div>
+
+      <div className="flex w-full items-center justify-center pt-3">
+        <p className="text-center text-xs">
+          Copyright © 2025 Ballarat Box Sports. All rights reserved.
+        </p>
       </div>
     </footer>
   );

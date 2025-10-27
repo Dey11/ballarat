@@ -13,7 +13,7 @@ export default function AboutUsSection() {
         </h3>
       </div>
 
-      <div className="bg-foreground text-background font-inter mb-5 px-2 py-3 text-center">
+      <div className="bg-foreground text-background font-inter mb-5 px-2 py-3 text-center font-semibold">
         Ballarat’s only venue offering Box Cricket, Futsal & AFL together in one
         space
       </div>
@@ -42,8 +42,8 @@ export default function AboutUsSection() {
 
               <p className="font-inter max-w-sm pt-3 text-sm sm:text-base">
                 Our venue was engineered to be a true hub for local passions. We
-                offer professional, dedicated setups for Ballarat's favourite
-                sports: Futsal, AFL, and Box Cricket.
+                offer professional, dedicated setups available 24x7 for
+                Ballarat's favourite sports: Futsal, AFL, and Box Cricket.
               </p>
 
               <Image
@@ -54,7 +54,7 @@ export default function AboutUsSection() {
                 className="absolute inset-y-23 right-0 hidden sm:block"
               />
               <Image
-                src="/about-us/indoor-afl.svg"
+                src="/about-us/box-afl.svg"
                 alt="Multi Sport Setup"
                 width={120}
                 height={120}
