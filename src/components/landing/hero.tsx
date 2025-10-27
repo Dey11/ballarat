@@ -4,7 +4,7 @@ import CTAButtons from "./cta-buttons";
 export default function Hero() {
   return (
     <div className="text-background relative flex h-full flex-col items-center justify-center gap-y-10 text-center text-pretty">
-      <h4 className="font-inter from-primary via-primary/70 to-primary text-foreground absolute inset-x-0 top-1/5 mx-auto flex w-fit items-center gap-x-2 rounded-full bg-gradient-to-r px-4 py-1 text-xs">
+      <h4 className="font-inter from-primary via-primary/80 to-primary text-foreground mx-auto flex w-fit items-center gap-x-2 rounded-full bg-gradient-to-r px-4.5 py-1.5 text-xs">
         <span className="font-bold italic">FIFA Approved</span> synthetic turfs
         <ShieldCheck className="size-4" />
       </h4>

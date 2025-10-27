@@ -54,7 +54,7 @@ export default function AboutUsSection() {
                 className="absolute inset-y-23 right-0 hidden sm:block"
               />
               <Image
-                src="/about-us/box-afl.svg"
+                src="/about-us/box-afl.png"
                 alt="Multi Sport Setup"
                 width={120}
                 height={120}

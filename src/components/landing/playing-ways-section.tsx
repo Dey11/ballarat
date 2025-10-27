@@ -201,7 +201,7 @@ function CardWrapper({
       <div className="px-2 py-2 sm:px-4">{children}</div>
       <Link
         href={href}
-        className="bg-foreground font-roboto-condensed text-primary flex items-center justify-center gap-2 rounded-lg p-2 text-sm font-semibold sm:text-lg md:justify-between"
+        className="bg-foreground font-roboto-condensed text-primary flex items-center justify-center gap-2 rounded-lg p-2 px-4 text-sm font-semibold sm:text-lg md:justify-between"
       >
         {footer}
         <div className="bg-background text-foreground rounded-sm p-1">

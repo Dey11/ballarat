@@ -62,7 +62,7 @@ const rules: SportRules[] = [
     ],
   },
   {
-    sport: "Futsal",
+    sport: "Box Futsal",
     sections: [
       {
         title: "I. Game Format & Teams",
@@ -147,7 +147,7 @@ function SportCollapsible({
         <button
           className={cn(
             "bg-primary text-primary-foreground rounded-brand w-full cursor-pointer px-4 py-4 text-left text-2xl font-medium shadow-sm transition-colors",
-            "font-roboto-condensed flex items-center justify-between shadow-md",
+            "font-roboto-condensed flex items-center justify-between font-semibold shadow-md",
           )}
         >
           <span>{sport}</span>
@@ -183,11 +183,11 @@ function SportCollapsible({
 
 export default function Page() {
   return (
-    <main className="mx-auto max-w-screen-2xl p-4 py-10">
-      <h1 className="font-dm-sans text-center text-4xl font-bold sm:text-5xl">
+    <main className="p-4 py-10">
+      <h1 className="font-dm-sans pt-10 text-center text-4xl font-bold sm:text-5xl">
         The Sportsbook
       </h1>
-      <h3 className="font-inter mx-auto mt-4 max-w-2xl text-center text-base font-medium tracking-wider text-pretty sm:text-lg">
+      <h3 className="font-inter mx-auto mt-5 max-w-lg text-center font-medium tracking-wider text-pretty sm:text-lg">
         Every great game needs a clear set of rules. Here you'll find everything
         you need to know to keep our matches fun, fast, and fair for everyone
       </h3>

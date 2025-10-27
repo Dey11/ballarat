@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function CTAButtons() {
   return (
-    <div className="flex flex-col gap-4 md:flex-row">
+    <div className="flex flex-col gap-4 pt-5 md:flex-row">
       <Link href="#contact">
         <motion.button
           initial="initial"

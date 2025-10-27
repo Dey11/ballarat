@@ -5,11 +5,6 @@ import Link from "next/link";
 export default function GamesSection() {
   return (
     <div id="games" className="mx-auto max-w-screen-2xl p-4 pt-16">
-      <h4 className="font-inter from-primary via-primary/70 to-primary text-foreground mx-auto flex w-fit items-center gap-x-2 rounded-full bg-gradient-to-r px-4 py-1 text-xs">
-        <span className="font-bold italic">FIFA Approved</span> synthetic turfs
-        <ShieldCheck className="size-4" />
-      </h4>
-
       <h2 className="font-dm-sans mt-5 text-center text-4xl font-semibold text-pretty">
         Choose Your Game
       </h2>
