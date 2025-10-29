@@ -12,9 +12,10 @@ export default function Hero() {
         This is the New Home of <span className="italic">Ballarat Sport.</span>
       </h1>
 
-      <h3 className="font-inter max-w-screen-sm text-base md:text-xl">
-        Get Ready, Ballarat's premier courts with all gear provided for Futsal,
-        AFL, and Cricket are opening soon. Sign up for launch news and offers.
+      <h3 className="font-inter max-w-screen-md text-base md:text-xl">
+        Get Ready, Ballarat's premier courts, open 24x7 with all gear provided
+        for Futsal, AFL, and Cricket are opening soon. Sign up for launch news
+        and offers.
       </h3>
 
       <CTAButtons />

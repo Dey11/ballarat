@@ -8,8 +8,9 @@ export default function AboutUsSection() {
           Built for Ballarat
         </h2>
         <h3 className="font-inter mx-auto mt-3 max-w-xl px-4 text-center font-medium text-pretty">
-          We built a welcoming space for the entire Ballarat sports community,
-          from serious teams chasing a title to mates just after a fun hit-out.
+          We built a 24/7 welcoming space for the entire Ballarat sports
+          community, from serious teams chasing a title to mates just after a
+          fun hit-out.
         </h3>
       </div>
 

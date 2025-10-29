@@ -59,7 +59,8 @@ export default function Header() {
               alt="logo"
               width={100}
               height={39}
-              className="px-2 py-1"
+              // className="px-2 py-1"
+              // className="shrink-0 pl-2"
             />
           </Link>
 
