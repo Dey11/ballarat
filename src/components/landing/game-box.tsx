@@ -29,7 +29,7 @@ export default function GameBox({
           <p className="text-sm">{capacity}-a-side</p>
           <h3 className="font-dm-sans text-3xl font-semibold">{name}</h3>
         </div>
-        <p className="px-3 font-medium">{description}</p>
+        <p className="max-w-xs px-3 font-medium">{description}</p>
         <div className="relative h-80 w-full">
           <Image src={image} alt={name} fill className="object-cover" />
         </div>{" "}

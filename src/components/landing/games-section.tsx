@@ -16,21 +16,21 @@ export default function GamesSection() {
       <div className="flex flex-wrap items-center justify-center gap-5 pt-10 pb-5">
         <GameBox
           capacity={6}
-          description="6-a-side box cricket is a fast-paced, exciting format of the game, perfect for small teams. It emphasizes quick reflexes."
+          description="6-a-side box cricket is a fast-paced, exciting format, perfect for small teams. It involves quick reflexes, strategic thinking, and dynamic batting & fielding techniques in a small space."
           image="/game-boxes/box-cricket.png"
           name="Box Cricket"
           svg="/game-boxes/box-cricket.svg"
         />
         <GameBox
           capacity={5}
-          description="6-a-side box cricket is a fast-paced, exciting format of the game, perfect for small teams. It emphasizes quick reflexes."
+          description="5-a-side box futsal is an intense, high-energy version of football designed for compact indoor courts. It rewards sharp passing, close control, and lightning-fast decision-making."
           image="/game-boxes/futsal.png"
           name="Futsal"
           svg="/game-boxes/futsal.svg"
         />
         <GameBox
           capacity={5}
-          description="6-a-side box cricket is a fast-paced, exciting format of the game, perfect for small teams. It emphasizes quick reflexes."
+          description="5-a-side box AFL brings the thrill of Australian Rules Football into a fast, enclosed arena. It highlights agility, quick handpasses, and precision kicks in a continuous, action-packed game."
           image="/game-boxes/box-afl.png"
           name="Box AFL"
           svg="/game-boxes/box-afl.svg"
